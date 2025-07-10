@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-07-09T22:52:20-0300",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 23.0.2 (Homebrew)"
+    date = "2025-07-10T00:37:48-0300",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 23.0.1 (Oracle Corporation)"
 )
 @Component
 public class CartaoMapperImpl implements CartaoMapper {
@@ -58,9 +58,7 @@ public class CartaoMapperImpl implements CartaoMapper {
 
         cartaoSaldoRepresentation.id( cartao.getId() );
         cartaoSaldoRepresentation.numero( cartao.getNumero() );
-        if ( cartao.getSaldo() != null ) {
-            cartaoSaldoRepresentation.saldo( cartao.getSaldo().toString() );
-        }
+        cartaoSaldoRepresentation.saldo( cartao.getSaldo() );
 
         return cartaoSaldoRepresentation.build();
     }

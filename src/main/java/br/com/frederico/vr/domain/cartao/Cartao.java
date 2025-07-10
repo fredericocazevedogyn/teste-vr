@@ -23,6 +23,12 @@ public class Cartao implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public Cartao(String numeroCartao, String senha, BigDecimal saldo) {
+        this.numero = numeroCartao;
+        this.senha = senha;
+        this.saldo = saldo;
+    }
+
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(generator = "uuid")
